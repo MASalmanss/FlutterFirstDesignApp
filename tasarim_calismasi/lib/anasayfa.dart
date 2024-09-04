@@ -33,22 +33,10 @@ class _AnasayfaState extends State<Anasayfa> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                TextButton(onPressed: (){},
-                  child: Text("Cheese" , style: TextStyle(color: Yazirenk),),
-                  style: TextButton.styleFrom(backgroundColor: Anarenk),
-                ),
-                TextButton(onPressed: (){},
-                  child: Text("Sausage" , style: TextStyle(color: Yazirenk),),
-                  style: TextButton.styleFrom(backgroundColor: Anarenk),
-                ),
-                TextButton(onPressed: (){},
-                  child: Text("Olive" , style: TextStyle(color: Yazirenk),),
-                  style: TextButton.styleFrom(backgroundColor: Anarenk),
-                ),
-                TextButton(onPressed: (){},
-                  child: Text("Pepper" , style: TextStyle(color: Yazirenk),),
-                  style: TextButton.styleFrom(backgroundColor: Anarenk),
-                ),
+                Chip("Cheese"),
+                Chip("Sausage"),
+                Chip("Olive"),
+                Chip("Pepper"),
               ],
             ),
             Padding(
@@ -77,6 +65,19 @@ class _AnasayfaState extends State<Anasayfa> {
 
           ],
         )
+    );
+  }
+}
+
+class Chip extends StatelessWidget {
+  String yazi;
+  Chip(this.yazi);
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(onPressed: (){},
+      child: Text(yazi , style: TextStyle(color: Yazirenk),),
+      style: TextButton.styleFrom(backgroundColor: Anarenk),
     );
   }
 }
