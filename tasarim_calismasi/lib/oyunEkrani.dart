@@ -15,13 +15,21 @@ class OyunEkrani extends StatefulWidget {
 
 class _OyunEkraniState extends State<OyunEkrani> {
 
-
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Oyun Ekrani"),),
+      appBar: AppBar(
+        title: Text("Oyun Ekrani"),
+        leading: IconButton(onPressed: (){
+          Navigator.pop(context);
+        }, icon: Icon(Icons.arrow_back_ios_new)), ),
 
       body: Center(
         child: Column(
